@@ -20,7 +20,7 @@ Within this challenge, we were required to use specific skills learnt in the pas
 
 *Note all the projects link to my first project as I am yet to have completed 5 projects
 
-This is the live URL: 
+This is the live URL: https://g-murphy03.github.io/Portfolio/
 
 ### Screenshots 
 ![Screenshot 1](/assets/images/Screenshot-1.png)
