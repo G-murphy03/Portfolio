@@ -23,5 +23,5 @@ Within this challenge, we were required to use specific skills learnt in the pas
 This is the live URL: 
 
 ### Screenshots 
-![Screenshot 1](/assets/images/screenshot-1)
-![Screenshot 2](/assets/images/screenshot-2)
+![Screenshot 1](/assets/images/Screenshot-1.png)
+![Screenshot 2](/assets/images/Screenshot-2.png)
