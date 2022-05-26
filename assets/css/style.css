@@ -4,9 +4,9 @@
     margin: 0;
 }
 
-header {;
+header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #708090;
+    background-color: #535c68;
     padding: 20px 50px 20px 0;
 }
 
@@ -16,7 +16,7 @@ h1 {
     background-color: #add8e6;
     display: inline-block;
     font-size: 36px;
-    color: #708090;
+    color: #535c68;
 }
 
 nav {
@@ -30,13 +30,18 @@ nav {
 
 ul {
     list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
 li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 35px;
 }
 
+/*This is selecting the all the a (anchor) tags and styling it to fit the appearance in the mock-up */
 a {
     color: #add8e6;
     padding-bottom: 5px;
@@ -47,89 +52,285 @@ a {
     margin: 0px 2px;
 }
 
-figure {
-    position:relative;
-    text-align: center;
-    color: white;
+main {
+    background-color:aliceblue;
 }
-.placeholder {
+
+.background {
     width:100%;
     height:300px;
 }
 
+/* This line of code is positioning the text in the div with class "overlap" on the background image to the bottom right */
 .overlap {
     position: absolute;
-    bottom: 25px;
-    right: 40px;
+    top: 316px;
+    right: 60px;
     font-size: 45px;
     background-color:#add8e6;
-    padding:5px;
-    color: #708090;
+    padding: 5px;
+    color: #535c68;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.about-me {
+/* This is setting a 25px margin to the left and right of the main chunk of the article to create a bit of space */
+article {
+    margin: 0 25px;
+}
+
+.about-me-heading {
     display: flex;
-    margin-top: 25px;
-    margin: 25px 100px 0 100px;
+    margin-top: 40px;
+    margin-right: 25px;
+    margin-left:42px;
 }
 
-.about-me h2 {
-    border-right: 3.5px solid #708090;
+/* This is styling all the h2 tags so it is consistent throughout the entire page */
+h2 {
+    border-right: 3.5px solid #535c68;
     display: inline-block;
-    color:#708090;
+    color:#535c68;
     font-size: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     padding-right: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align:right;
-}
-
-.about-me p  {
-    display: inline-block;
-    margin-left: 30px;
-    line-height: 1.5;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.work {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 25px 100px 0 100px;
-}
-
-.work h2 {
-    border-right: 3.5px solid #708090;
-    display: inline-block;
-    color:#708090;
-    font-size: 50px;
-    padding-bottom: 500px;
-    padding-right: 15px;
-    margin-left: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: right;
 }
 
+.about-me-heading p  {
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* This is the establishing the section where all the projects are displayed */
+.work-heading {
+    display: flex;
+    margin-top: 40px;
+    margin-right: 25px;
+    margin-left: 60px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    position:relative;
+}
+
+.project-1 {
+    margin-bottom: -16px;
+}
+
+/* This is styling the first and largest project appeared on the page */
 .first-project {
     border: 6px solid #add8e6;
-    margin-left: 30px;
-    display: flex;
+    display: block;
 }
 
-.contact-me {
-    display: flex;
-    margin-top: 25px;
-    margin: 25px 100px 0 100px;
+/* This is an image hidden underneath the first project image which will allow a change in colour effect on the image when a user hovers over the content. The styling allows the image to be positioned directly under the specific project */
+.project-1 .first-project-hover {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 6px solid #add8e6;
 }
 
-.contact-me  h2 {
-    border-right: 3.5px solid #708090;
-    display: inline-block;
-    color:#708090;
-    font-size: 50px;
-    padding-bottom: 100px;
-    padding-right: 15px;
+/* Through using pseudo classes, the image is able to appear over the initial image creating the changing colour effect */
+.project-1:hover .first-project-hover {
+    display:inline;
+}
+
+/*This is styling and positioning the text box over the first project */
+.overlap-project-1 {
+    position: absolute;
+    top: 215px;
+    background-color:#add8e6;
+    padding:5px;
+    padding-left: 18px;
+    color: #535c68;
+    text-align: left;
+}
+
+/* This is styling all the project headings within the textboxes */
+.project-heading {
+    font-size: 30px;
+    margin-bottom:5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align:right;
 }
 
+/* This is styling all the project descriptions within the textboxes */
+.project-description {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-2 {
+    width: 49%;
+    height: 150px;
+    margin-right: 1%;
+    margin-bottom:10px;
+}
+
+.projects-2-4 {
+    border: 6px solid #add8e6;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 1%;
+}
+
+.project-link {
+    margin: 0px;
+}
+
+.project-2 .second-project-hover {
+    display: none;
+    position: absolute;
+    border: 6px solid #add8e6;
+    margin-top: 10px;
+    margin-right: 1%;
+    position: relative;
+    bottom: 160px;
+}
+
+.project-2:hover .second-project-hover {
+    display:inline;
+}
+
+.overlap-project-2 {
+    position: absolute;
+    background-color:#add8e6;
+    padding:5px;
+    padding-left: 18px;
+    color: #535c68;
+    text-align: left;
+    top: 377px;
+}
+
+.project-3 {
+    width: 49%;
+    height: 150px;
+    margin-left: 1%;
+}
+
+.projects-3-5 {
+    border: 6px solid #add8e6;
+    display: flex;
+    margin-top: 10px;
+}
+
+.project-3 .third-project-hover {
+    display: none;
+    position: absolute;
+    border: 6px solid #add8e6;
+    margin-top: 10px;
+    position: relative;
+    bottom: 160px;
+}
+
+.project-3:hover .third-project-hover {
+    display:inline;
+}
+
+.overlap-project-3 {
+    position: absolute;
+    background-color:#add8e6;
+    padding:5px;
+    padding-left: 18px;
+    color: #535c68;
+    text-align: left;
+    top: 377px;
+    left: 51%;
+}
+
+.project-4 {
+    width: 49%;
+    height: 150px;
+    margin-right: 1%;
+    margin-bottom:10px;
+}
+
+.project-4 .fourth-project-hover {
+    display: none;
+    position: absolute;
+    border: 6px solid #add8e6;
+    margin-top: 10px;
+    margin-right: 1%;
+    position: relative;
+    bottom: 160px;
+}
+
+.project-4:hover .fourth-project-hover {
+    display:inline;
+}
+
+.overlap-project-4 {
+    position: absolute;
+    background-color:#add8e6;
+    padding:5px;
+    padding-left: 18px;
+    color: #535c68;
+    text-align: left;
+    top: 536px;
+}
+
+.project-5 {
+    width: 49%;
+    height: 150px;
+    margin-left: 1%;
+}
+
+.project-5 .fifth-project-hover {
+    display: none;
+    position: absolute;
+    border: 6px solid #add8e6;
+    margin-top: 10px;
+    position: relative;
+    bottom: 160px;
+}
+
+.project-5:hover .fifth-project-hover {
+    display:inline;
+}
+
+.overlap-project-5 {
+    position: absolute;
+    background-color:#add8e6;
+    padding:5px;
+    padding-left: 18px;
+    color: #535c68;
+    text-align: left;
+    top: 536px;
+    left: 51%;
+}
+
+.contact-me-heading {
+    display: flex;
+    margin-top: 40px;
+    margin-right: 25px;
+}
+
+/* This is styling the contact information section*/
+.footer {
+    padding-top: 15px;
+    margin-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 62px;
+}
+
+.contact-info {
+    margin: 0 34px;
+}
